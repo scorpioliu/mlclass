@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 
+'''
+example code to create a tag cloud
+
+by scorpioLiu
+created on 2012.9.7
+'''
+
 import os
 import sys
 import webbrowser

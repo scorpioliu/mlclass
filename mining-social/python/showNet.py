@@ -1,8 +1,11 @@
 #coding=utf8
 
 '''
-'''
+show the touchpal followers in twitter
 
+by scorpioLiu
+created on 2012.9.7
+'''
 import networkx as nx
 from pylab import *
 from networkx import graphviz_layout

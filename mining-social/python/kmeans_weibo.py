@@ -1,5 +1,12 @@
 #coding = utf8
 #!/usr/bin/python
+
+'''
+use kmeans to cluster weibo
+
+by scorpioLiu
+created on 2012.9.7
+'''
  
 from numpy import *
 from pylab import *
