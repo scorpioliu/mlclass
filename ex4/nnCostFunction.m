@@ -81,10 +81,10 @@ Delta3 = (O3' - label)';
 for t = 1:m
 	delta3 = Delta3(:, t);
     
-    delta2 = (Theta2' * delta3) .* [1; sigmoidGradient(I2(:, t))];
-    delta2 = delta2(2:end);
+	delta2 = (Theta2' * delta3) .* [1; sigmoidGradient(I2(:, t))];
+	delta2 = delta2(2:end);
 
-    Delta1 = Delta1 + delta2 * [1 X(t, :)];
+	Delta1 = Delta1 + delta2 * [1 X(t, :)];
 	Delta2 = Delta2 + delta3 * O2(:, t)';
 end
 
