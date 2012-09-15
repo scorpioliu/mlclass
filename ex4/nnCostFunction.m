@@ -48,7 +48,7 @@ O3 = sigmoid(I3);
 label = zeros(size(O3'));
 
 for i = 1:num_labels
-	label(:, i) = (y == i);
+    label(:, i) = (y == i);
 end
 
 cost = -label .* log(O3') - (ones(size(label)) - label) .* log(ones(size(O3')) - O3');
@@ -79,13 +79,11 @@ Delta2 = zeros(size(Theta2));
 Delta3 = (O3' - label)';
 
 for t = 1:m
-	delta3 = Delta3(:, t);
-    
-	delta2 = (Theta2' * delta3) .* [1; sigmoidGradient(I2(:, t))];
-	delta2 = delta2(2:end);
-
-	Delta1 = Delta1 + delta2 * [1 X(t, :)];
-	Delta2 = Delta2 + delta3 * O2(:, t)';
+    delta3 = Delta3(:, t);
+    delta2 = (Theta2' * delta3) .* [1; sigmoidGradient(I2(:, t))];
+    delta2 = delta2(2:end);
+    Delta1 = Delta1 + delta2 * [1 X(t, :)];
+    Delta2 = Delta2 + delta3 * O2(:, t)';
 end
 
 Theta1_grad = Delta1 / m;
